@@ -1,27 +1,23 @@
 import express, { response } from "express";
 import dotenv from "dotenv";
-import pkg from "pg";
-const { Pool } = pkg;
 dotenv.config()
+import db from "./db.mjs";
 
 const app = express();
 const PORT = process.env.PORT_BACKEND || 3000;
-
-const pgPool = new Pool ({
-    user: 'appuser',
-    password: '1234',
-    host: 'localhost',
-    port: 5000,
-    database: 'appdb',
-    host: '../connection',
-  });
 
 app.listen(PORT, () => {
     console.log(`Running on Port: ${PORT}`);
 });
 
-app.get("/", (request,response) => {
-    response.send(`Hello World! ${PORT}` );
+app.get("/", async (req,res) => {
+    try {
+        const result = await db.query('SELECT * FROM TEST');
+        res.json(result.rows);
+      } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+      }
 });
 
 app.get("/menu", (request,response) => {

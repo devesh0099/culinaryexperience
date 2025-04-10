@@ -46,3 +46,8 @@
 	VALUES ("gello");
 2025-04-10 15:10:45.477 IST [75113] LOG:  checkpoint starting: time
 2025-04-10 15:10:48.100 IST [75113] LOG:  checkpoint complete: wrote 26 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.509 s, sync=0.090 s, total=2.623 s; sync files=23, longest=0.005 s, average=0.004 s; distance=94 kB, estimate=94 kB; lsn=0/1A0E098, redo lsn=0/1A0E060
+2025-04-10 15:14:32.392 IST [80618] ERROR:  column "gello" does not exist at character 32
+2025-04-10 15:14:32.392 IST [80618] STATEMENT:  INSERT INTO TEST(name)
+	VALUES ("gello");
+2025-04-10 15:15:45.200 IST [75113] LOG:  checkpoint starting: time
+2025-04-10 15:15:45.366 IST [75113] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.101 s, sync=0.009 s, total=0.167 s; sync files=2, longest=0.005 s, average=0.005 s; distance=0 kB, estimate=84 kB; lsn=0/1A0E328, redo lsn=0/1A0E2F0
