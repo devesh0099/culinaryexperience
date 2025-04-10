@@ -1,0 +1,10 @@
+2025-04-10 14:42:26.610 IST [68188] LOG:  redirecting log output to logging collector process
+2025-04-10 14:42:26.610 IST [68188] HINT:  Future log output will appear in directory "log".
+2025-04-10 14:44:24.780 IST [68949] LOG:  redirecting log output to logging collector process
+2025-04-10 14:44:24.780 IST [68949] HINT:  Future log output will appear in directory "log".
+2025-04-10 14:45:27.345 IST [69379] LOG:  redirecting log output to logging collector process
+2025-04-10 14:45:27.345 IST [69379] HINT:  Future log output will appear in directory "log".
+2025-04-10 14:55:47.358 IST [73326] LOG:  redirecting log output to logging collector process
+2025-04-10 14:55:47.358 IST [73326] HINT:  Future log output will appear in directory "log".
+2025-04-10 15:00:45.246 IST [75111] LOG:  redirecting log output to logging collector process
+2025-04-10 15:00:45.246 IST [75111] HINT:  Future log output will appear in directory "log".

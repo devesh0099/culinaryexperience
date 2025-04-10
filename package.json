@@ -16,11 +16,14 @@
   "main": "app.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon ./src/app.mjs | nodemon ./api/backend.mjs",
+    "start:db": " pg_ctl -D ./data -l logfile start",
+    "end:db":" pg_ctl -D ./data stop",
+    "start:dev": "nodemon ./src/app.mjs | nodemon ./api/backend.mjs ",
     "start": "node ./src/app.mjs | node ./api/backend.mjs"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pg": "^8.14.1"
   },
   "devDependencies": {
     "dotenv": "^16.4.7",

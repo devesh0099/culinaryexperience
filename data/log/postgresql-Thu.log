@@ -1,0 +1,48 @@
+2025-04-10 14:55:47.358 IST [73326] LOG:  starting PostgreSQL 16.8 on x86_64-redhat-linux-gnu, compiled by gcc (GCC) 14.2.1 20240912 (Red Hat 14.2.1-3), 64-bit
+2025-04-10 14:55:47.358 IST [73326] LOG:  listening on IPv6 address "::1", port 5000
+2025-04-10 14:55:47.358 IST [73326] LOG:  listening on IPv4 address "127.0.0.1", port 5000
+2025-04-10 14:55:47.365 IST [73326] LOG:  listening on Unix socket "../connection/.s.PGSQL.5000"
+2025-04-10 14:55:47.374 IST [73330] LOG:  database system was shut down at 2025-04-10 14:55:00 IST
+2025-04-10 14:55:47.380 IST [73326] LOG:  database system is ready to accept connections
+2025-04-10 15:00:39.405 IST [73326] LOG:  received fast shutdown request
+2025-04-10 15:00:39.410 IST [73326] LOG:  aborting any active transactions
+2025-04-10 15:00:39.412 IST [73326] LOG:  background worker "logical replication launcher" (PID 73333) exited with exit code 1
+2025-04-10 15:00:39.412 IST [73328] LOG:  shutting down
+2025-04-10 15:00:39.416 IST [73328] LOG:  checkpoint starting: shutdown immediate
+2025-04-10 15:00:40.443 IST [73328] LOG:  checkpoint complete: wrote 1007 buffers (6.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.028 s, sync=0.979 s, total=1.031 s; sync files=317, longest=0.032 s, average=0.004 s; distance=4760 kB, estimate=4760 kB; lsn=0/19F66F0, redo lsn=0/19F66F0
+2025-04-10 15:00:40.449 IST [73326] LOG:  database system is shut down
+2025-04-10 15:00:45.246 IST [75111] LOG:  starting PostgreSQL 16.8 on x86_64-redhat-linux-gnu, compiled by gcc (GCC) 14.2.1 20240912 (Red Hat 14.2.1-3), 64-bit
+2025-04-10 15:00:45.246 IST [75111] LOG:  listening on IPv6 address "::1", port 5000
+2025-04-10 15:00:45.246 IST [75111] LOG:  listening on IPv4 address "127.0.0.1", port 5000
+2025-04-10 15:00:45.253 IST [75111] LOG:  listening on Unix socket "../connection/.s.PGSQL.5000"
+2025-04-10 15:00:45.262 IST [75115] LOG:  database system was shut down at 2025-04-10 15:00:40 IST
+2025-04-10 15:00:45.267 IST [75111] LOG:  database system is ready to accept connections
+2025-04-10 15:01:45.945 IST [75562] FATAL:  database "appuser" does not exist
+2025-04-10 15:04:21.111 IST [76431] FATAL:  database "appuser" does not exist
+2025-04-10 15:05:45.350 IST [75113] LOG:  checkpoint starting: time
+2025-04-10 15:05:45.377 IST [75113] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.007 s, total=0.027 s; sync files=2, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/19F67D8, redo lsn=0/19F67A0
+2025-04-10 15:07:13.892 IST [77067] ERROR:  syntax error at or near "(" at character 26
+2025-04-10 15:07:13.892 IST [77067] STATEMENT:  CREATE TABLE TEST(varchar(50) name);
+2025-04-10 15:07:28.511 IST [77067] ERROR:  type "string" does not exist at character 24
+2025-04-10 15:07:28.511 IST [77067] STATEMENT:  CREATE TABLE TEST(name string);
+2025-04-10 15:08:06.143 IST [77067] ERROR:  column "Raj" does not exist at character 25
+2025-04-10 15:08:06.143 IST [77067] STATEMENT:  INSERT INTO TEST values("Raj");
+2025-04-10 15:08:54.708 IST [77067] ERROR:  column "h" does not exist at character 26
+2025-04-10 15:08:54.708 IST [77067] STATEMENT:  INSERT INTO TEST VALUES ("h");
+2025-04-10 15:08:57.510 IST [77067] ERROR:  column "h" does not exist at character 26
+2025-04-10 15:08:57.510 IST [77067] STATEMENT:  INSERT INTO TEST VALUES (h);
+2025-04-10 15:09:30.740 IST [77067] ERROR:  column "h" does not exist at character 26
+2025-04-10 15:09:30.740 IST [77067] STATEMENT:  INSERT INTO TEST VALUES (h);
+2025-04-10 15:09:51.489 IST [77067] ERROR:  column "1" does not exist at character 26
+2025-04-10 15:09:51.489 IST [77067] STATEMENT:  INSERT INTO TEST VALUES ("1");
+2025-04-10 15:10:09.436 IST [77067] ERROR:  column "MYSELF" does not exist at character 26
+2025-04-10 15:10:09.436 IST [77067] STATEMENT:  INSERT INTO TEST
+	VALUES ("MYSELF");
+2025-04-10 15:10:27.119 IST [77067] ERROR:  column "MYSELF" does not exist at character 32
+2025-04-10 15:10:27.119 IST [77067] STATEMENT:  INSERT INTO TEST(name)
+	VALUES ("MYSELF");
+2025-04-10 15:10:40.109 IST [77067] ERROR:  column "gello" does not exist at character 32
+2025-04-10 15:10:40.109 IST [77067] STATEMENT:  INSERT INTO TEST(name)
+	VALUES ("gello");
+2025-04-10 15:10:45.477 IST [75113] LOG:  checkpoint starting: time
+2025-04-10 15:10:48.100 IST [75113] LOG:  checkpoint complete: wrote 26 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.509 s, sync=0.090 s, total=2.623 s; sync files=23, longest=0.005 s, average=0.004 s; distance=94 kB, estimate=94 kB; lsn=0/1A0E098, redo lsn=0/1A0E060
